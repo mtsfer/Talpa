@@ -1,0 +1,53 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: hsl(240, 3%, 7%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1em;
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+}
+
+header, .informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: clamp(.5rem, 3.5vmin, 1.5rem);
+    margin-bottom: 1em;
+}
+
+h3 {
+    color: white;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(8, 2em);
+    grid-template-rows: repeat(8, 2em);
+    gap: .25em;
+    margin-bottom: 1em;
+}
+
+.tile {
+    font-size: 1em;
+    color: white;
+    border: .075em solid hsl(240, 2%, 23%);
+    text-transform: uppercase;
+    display: flex;
+    padding: .25em;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
